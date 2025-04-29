@@ -6,9 +6,9 @@
 
 ## 📌 What It Does
 
-MotiBot automatically sends a motivational quote every weekday (Mon–Fri) at 10:00 AM to a Microsoft Teams channel via an Incoming Webhook or Bot Framework integration.
-
+MotiBot automatically sends a motivational quote every day at 05:00 PM to a Microsoft Teams channel via an Incoming Webhook or Bot Framework integration.
 It's simple, inspiring, and perfect for energizing distributed teams.
+
 
 ---
 
