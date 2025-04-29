@@ -1,0 +1,29 @@
+name: Post Daily Motivation to Teams
+
+on:
+  schedule:
+    # Runs at 03:00 PM UTC(05:00 CET) every day
+    - cron: '0 8 * * *'
+  workflow_dispatch: # allow manual trigger
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4.2.2
+
+      - name: Set up Python
+        uses: actions/setup-python@v5.6.0
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run the script
+        env:
+          TEAMS_WEBHOOK_URL: ${{ secrets.TEAMS_WEBHOOK_URL }}
+        run: python teams_bot.py
