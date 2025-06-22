@@ -1,9 +1,9 @@
 name: Post Daily Motivation to Teams
 
 on:
-  schedule:
+  # schedule:
     # Runs at 03:00 PM UTC(05:00 CET) every day
-    - cron: '0 15 * * *'
+    # - cron: '0 15 * * *'
   workflow_dispatch: # allow manual trigger
 
 jobs:
